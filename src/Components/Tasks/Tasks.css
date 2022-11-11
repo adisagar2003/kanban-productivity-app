@@ -1,0 +1,88 @@
+.Tasks {
+  padding: 4px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  overflow: scroll;
+  display: flex;
+  top: 100px;
+  gap: 62px;
+}
+
+.Tasks__todo {
+  width: 300px;
+  margin-top: 40px;
+}
+
+.Tasks__genre {
+  font-weight: 700;
+  opacity: 0.5;
+  position: relative;
+}
+.Tasks__genre::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  background-color: rgb(251, 255, 0);
+  left: -50px;
+}
+.Tasks__genre.blue::before {
+  background-color: rgb(255, 0, 0);
+}
+
+.Tasks__genre.red::before {
+  background-color: green;
+}
+.Tasks__doing {
+  width: 300px;
+  margin-top: 40px;
+}
+.Tasks__done {
+  width: 300px;
+  margin-top: 40px;
+}
+
+.Task {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  width: 200px;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+  position: relative;
+  left: -50px;
+  height: 40px;
+  font-weight: 700;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.247);
+  cursor: move;
+}
+.Task__tasks {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Task__description {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 700px) {
+  .Tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    width: 400px;
+  }
+  .Tasks__todo {
+    position: relative;
+    margin-top: 600px;
+  }
+}

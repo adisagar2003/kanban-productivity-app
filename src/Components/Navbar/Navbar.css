@@ -1,0 +1,56 @@
+.Navbar {
+  height: 60px;
+  border-bottom: 0.5px solid gray;
+  width: 90%;
+  display: flex;
+  padding-top: 30px;
+  padding-left: 20px;
+  justify-content: space-between;
+  padding-right: 20px;
+  position: fixed;
+}
+.Navbar__heading {
+  font-weight: 700;
+  font-size: 24px;
+  position: relative;
+  bottom: 5px;
+}
+
+.Navbar__buttons {
+  display: flex;
+  gap: 42px;
+  margin-right: 50px;
+}
+
+.Navbar__buttons button {
+  height: 30px;
+  position: relative;
+  bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transform: scale(1.2, 1.2);
+}
+
+.Navbar__addTask {
+  border: none;
+  background-color: rgb(151, 127, 158);
+  color: white;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.Navbar__menu {
+  background: none;
+  border: none;
+  color: rgb(151, 127, 158);
+  font-weight: 700;
+  transition: 0.1s;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.Navbar__menu:hover {
+  background-color: rgba(255, 255, 255, 0.096);
+}
+@media screen and (max-width: 1200px) {
+}

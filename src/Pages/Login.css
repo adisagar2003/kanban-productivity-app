@@ -1,0 +1,78 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Login__credentials {
+  margin-top: 60px;
+  position: relative;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Login__credentials input {
+  border: none;
+  background-color: inherit;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: inherit;
+  border-radius: 1px;
+  width: 300px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.Login__credentials input:focus {
+  outline: none;
+}
+.Login__credentials a {
+  margin-bottom: 40px;
+  text-decoration: underline;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.Login__credentials button {
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(118, 59, 177);
+  border: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 22px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.Login__credentials button:hover {
+  border-radius: 14px;
+  opacity: 1;
+}
+
+.Login__logo {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  transform: translateY(-20%);
+  top: 20%;
+  font-size: 42px;
+  font-weight: 600;
+}
+.Login__logo svg {
+  position: relative;
+  top: 20px;
+  transform: scale(2, 2);
+}
+
+.Register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
