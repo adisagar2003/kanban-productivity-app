@@ -1,7 +1,7 @@
 .Tasks {
   padding: 4px;
   height: 100%;
-  width: 100%;
+  width: 130%;
   justify-content: center;
   position: relative;
   overflow: scroll;
@@ -80,9 +80,44 @@
     align-items: center;
     margin-left: 50px;
     width: 400px;
+    overflow: scroll;
   }
   .Tasks__todo {
-    position: relative;
-    margin-top: 600px;
   }
+}
+
+.Edit__modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.514);
+
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.Edit__subtasks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Edit__subtasks input {
+  background-color: blueviolet;
+}
+
+.Edit__modal button {
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+  margin-bottom: 40px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
 }

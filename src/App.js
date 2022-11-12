@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
@@ -8,6 +7,7 @@ import Register from "./Pages/Register";
 import { ThemeContext } from "./Context/ThemeContext";
 import { LoginContext } from "./Context/LoginContext";
 import { ModalContext } from "./Context/ModalContext";
+import EditTask from "./Components/Modals/EditTask";
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [userData, setUserData] = useState({});
@@ -15,10 +15,12 @@ function App() {
     addTask: false,
     editTask: false,
   });
+  const [setSelect] = useState("todo");
   return (
     <LoginContext.Provider value={{ userData, setUserData }}>
       <ModalContext.Provider value={{ modalOpen, setModalOpen }}>
         <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+          {modalOpen.editTask && <EditTask />}
           <div className={darkMode ? "dark__theme" : "light__theme"}>
             {modalOpen.addTask && (
               <div className="App__addTask">
@@ -57,6 +59,7 @@ function App() {
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                       </svg>
                     </div>
+
                     <div className="Add__addSubTaskCard">
                       <input placeholder="e.g Do dishes" />
                       <svg
@@ -70,8 +73,18 @@ function App() {
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                       </svg>
                     </div>
+
                     <button className="Add__button">+ Add New Subtask</button>
                   </div>
+                  <select
+                    className="add__tasks__dropdown"
+                    name="add_name"
+                    onChange={(e) => setSelect(e.target.value)}
+                  >
+                    <option value="todo">Todo</option>
+                    <option value="done">Done</option>
+                    <option value="doing">Doing</option>
+                  </select>
                 </div>
               </div>
             )}
