@@ -46,7 +46,7 @@ function Login() {
           to="/register"
         >
           {" "}
-          <a>Register</a>
+          <a href="/">Register</a>
         </Link>
         <button onClick={signInWithEmail}>Login</button>
       </div>

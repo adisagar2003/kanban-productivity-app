@@ -8,9 +8,9 @@ function Register() {
   const [confpass, setconfpass] = useState();
   const signUp = async () => {
     console.log("signing..");
-    if (pass == confpass) {
+    if (pass === confpass) {
       try {
-        const { user, session, error } = await supabase.auth.signUp({
+        const { user } = await supabase.auth.signUp({
           email: mail,
           password: pass,
         });
@@ -55,7 +55,7 @@ function Register() {
           onChange={(e) => setconfpass(e.target.value)}
         />
         <Link style={{ textDecoration: "none", color: "inherit" }} to="/login">
-          <a>Already signed in? Login</a>
+          <a href="/login">Already signed in? Login</a>
         </Link>
 
         <button onClick={() => signUp()}>Register</button>
