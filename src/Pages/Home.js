@@ -7,10 +7,16 @@ import "./Home.css";
 function Home() {
   return (
     <div className="Home">
-      <Sidebar />
+      <div className="Home__sidebar">
+        <Sidebar />
+      </div>
       <div className="Home__layout">
-        <Navbar />
-        <Tasks />
+        <div className="Home__navbar">
+          <Navbar />
+        </div>
+        <div className="Home__tasks">
+          <Tasks />
+        </div>
       </div>
     </div>
   );

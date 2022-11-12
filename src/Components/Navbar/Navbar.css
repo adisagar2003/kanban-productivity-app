@@ -1,12 +1,14 @@
 .Navbar {
   height: 60px;
   border-bottom: 0.5px solid gray;
-  width: 135%;
+  width: 100%;
   display: flex;
   padding-top: 30px;
   padding-left: 20px;
   justify-content: space-between;
   padding-right: 20px;
+  position: relative;
+  z-index: 9999;
 }
 .Navbar__heading {
   font-weight: 700;
@@ -18,6 +20,8 @@
 .Navbar__buttons {
   display: flex;
   gap: 42px;
+  position: absolute;
+  right: 0px;
   margin-right: 50px;
 }
 
