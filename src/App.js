@@ -1,10 +1,7 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import { useState, createContext, useContext } from "react";
-import Sidebar from "./Components/Sidebar/Sidebar";
-import Navbar from "./Components/Navbar/Navbar";
-import Tasks from "./Components/Tasks/Tasks";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
