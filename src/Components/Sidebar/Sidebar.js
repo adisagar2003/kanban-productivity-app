@@ -1,10 +1,12 @@
 import React, { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
+import { ModalContext } from "../../Context/ModalContext";
 import { ThemeContext } from "../../Context/ThemeContext";
 import "./Sidebar.css";
 function Sidebar() {
   const sidebar = useRef(null);
   const { setDarkMode, darkMode } = useContext(ThemeContext);
+  const { modalOpen, setModalOpen } = useContext(ModalContext);
   return (
     <div className="Sidebar" ref={sidebar}>
       <div className="Sidebar__logo">
